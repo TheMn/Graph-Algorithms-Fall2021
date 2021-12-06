@@ -1,0 +1,265 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2019
+
+% ready for submission
+% \usepackage{neurips_2019}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+    % \usepackage[preprint]{neurips_2019}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+\usepackage[final]{neurips}
+
+% to avoid loading the natbib package, add option nonatbib:
+    % \usepackage[nonatbib]{neurips_2019}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[center]{caption}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xepersian}
+
+\settextfont{XB Yas.ttf}
+
+\title{تمرین اول}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+  امیرحسین مهدی‌نژاد\\
+  شماره دانشجویی 810800058\\
+  \texttt{mahdinejad@ut.ac.ir} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+% create title (includes both anonymized and non-anonymized versions)
+% \providecommand{\@makepertitle}{}
+% \newcommand{\makepertitle}{%
+%   \vbox{%
+%     \hsize\textwidth
+%     \linewidth\hsize
+%     \vskip 0.1in
+%     \toptitlebar
+%     \centering
+%     {\LARGE\bf \@title\par}
+%     \bottomtitlebar
+%       \def\And{%
+%         \end{tabular}\hfil\linebreak[0]\hfil%
+%         \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+%       }
+%       \def\AND{%
+%         \end{tabular}\hfil\linebreak[4]\hfil%
+%         \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+%       }
+%       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
+%     \vskip 0.3in \@minus 0.1in
+%   }
+% }
+
+\begin{document}
+
+
+\begin{minipage}{0.1\textwidth}% adapt widths of minipages to your needs
+\includegraphics[width=1.1cm]{Photos/UT_logo.png}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.9\textwidth}\raggedleft
+دانشکده فنی، دانشگاه تهران\\
+الگوریتم‌های گراف و شبکه - 
+آذر
+ماه 1400\\
+\end{minipage}
+% \end{}
+
+
+\makepertitle
+
+
+% \begin{abstract}
+%  این بخش از یک پاراگراف تشکیل شده است که توضیحاتی کلی در مورد مساله و راه حل شما ارائه می‌دهد.
+% \end{abstract}
+
+\begin{multicols}{2}
+\section*{سوال اول}
+
+\subsection*{أ. درجه ورودی/خروجی}
+گراف \lr{a}
+\begin{LTR}
+$$\text{in} \left( 1 \right) = 1, \text{out} \left( 1 \right) = 3$$
+$$\text{in} \left( 2 \right) = 1, \text{out} \left( 2 \right) = 3$$
+$$\text{in} \left( 3 \right) = 1, \text{out} \left( 3 \right) = 3$$
+$$\text{in} \left( 4 \right) = 1, \text{out} \left( 4 \right) = 1$$
+$$\text{in} \left( 5 \right) = 4, \text{out} \left( 5 \right) = 2$$
+$$\text{in} \left( 6 \right) = 1, \text{out} \left( 6 \right) = 1$$
+$$\text{in} \left( 7 \right) = 2, \text{out} \left( 7 \right) = 2$$
+$$\text{in} \left( 8 \right) = 3, \text{out} \left( 8 \right) = 1$$
+$$\text{in} \left( 9 \right) = 3, \text{out} \left( 9 \right) = 1$$
+\end{LTR}
+
+گراف \lr{b}
+\begin{LTR}
+$$\text{in} \left( 1 \right) = 1, \text{out} \left( 1 \right) = 2$$
+$$\text{in} \left( 2 \right) = 1, \text{out} \left( 2 \right) = 2$$
+$$\text{in} \left( 3 \right) = 1, \text{out} \left( 3 \right) = 2$$
+$$\text{in} \left( 4 \right) = 2, \text{out} \left( 4 \right) = 1$$
+$$\text{in} \left( 5 \right) = 1, \text{out} \left( 5 \right) = 2$$
+$$\text{in} \left( 6 \right) = 3, \text{out} \left( 6 \right) = 0$$
+$$\text{in} \left( 7 \right) = 2, \text{out} \left( 7 \right) = 1$$
+$$\text{in} \left( 8 \right) = 1, \text{out} \left( 8 \right) = 2$$
+\end{LTR}
+
+\subsection*{ب. لیست مجاورتی}
+گراف \lr{a}
+\begin{align*}
+A( 1 ) &= \{( 1, 2 ), ( 1, 3 ), ( 1, 5 ) \}\\
+A( 2 ) &= \{( 2, 4 ), ( 2, 5 ), ( 2, 7 ) \}\\
+A( 3 ) &= \{( 3, 5 ), ( 3, 6 ), ( 3, 8 ) \}\\
+A( 4 ) &= \{( 4, 7 ) \}\\
+A( 5 ) &= \{( 5, 8 ), ( 5, 9 ) \}\\
+A( 6 ) &= \{( 6, 8 ) \}\\
+A( 7 ) &= \{( 7, 5 ), ( 7, 9 ) \}\\
+A( 8 ) &= \{( 8, 9 ) \}\\
+A( 9 ) &= \{( 9, 1 ) \}
+\end{align*}
+
+گراف \lr{b}
+\begin{align*}
+A( 1 ) &= \{( 1, 2 ), ( 1, 8 ) \}\\
+A( 2 ) &= \{( 2, 3 ), ( 2, 7 ) \}\\
+A( 3 ) &= \{( 3, 4 ), ( 3, 6 ) \}\\
+A( 4 ) &= \{( 4, 1 ) \}\\
+A( 5 ) &= \{( 5, 4 ), ( 5, 6 ) \}\\
+A( 6 ) &= \{ \}\\
+A( 7 ) &= \{( 7, 6 ) \}\\
+A( 8 ) &= \{( 8, 5 ), ( 8, 7 ) \}
+\end{align*}
+
+\subsection*{ت.}
+\subsubsection*{گشت شامل ۸ یال برای \lr{a}}
+\begin{LTR}
+$8 \rightarrow 9 \rightarrow 1 \rightarrow 2 \rightarrow 4 \rightarrow 7 \rightarrow 5 \rightarrow 8 \rightarrow 9$
+\end{LTR}
+
+\subsubsection*{گشت شامل ۶ یال برای \lr{b}}
+\begin{LTR}
+$8 \rightarrow 5 \rightarrow 4 \rightarrow 1 \rightarrow 2 \rightarrow 7 \rightarrow 6$
+\end{LTR}
+
+\pagebreak
+
+\subsection*{ث.}
+\subsubsection*{بررسی \lr{Acyclic} بودن}
+گراف
+\lr{a}
+حلقه دارد:
+\begin{LTR}
+$1 \rightarrow 5 \rightarrow 9 \rightarrow 1$
+\end{LTR}
+
+گراف
+\lr{b}
+نیز حلقه دارد:
+\begin{LTR}
+$1 \rightarrow 8 \rightarrow 5 \rightarrow 4 \rightarrow 1$
+\end{LTR}
+پس هیچکدام
+\lr{Acyclic}
+نیستند.
+
+\subsubsection*{بررسی \lr{Bipartite} بودن}
+گراف
+\lr{a}
+مثلث (حلقه به طول ۳) دارد. رئوس 
+$\{1, 5, 9\}$
+نباید دو به دو در یک دسته قرار بگیرند. لذا این گراف دوبخشی نیست.
+
+گراف
+\lr{b}
+دو بخشی است  و می‌توان دسته‌بندی زیر را برای رئوس آن ارائه کرد:
+\begin{LTR}
+$$S_1 = \{ 1, 3, 5, 7 \}$$
+$$S_2 = \{ 2, 4, 6, 8 \}$$
+\end{LTR}
+
+\subsubsection*{بررسی \lr{Strongly Connected} بودن}
+گراف
+\lr{a}
+قویا همبند است.
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.8\linewidth]{Photos/HW1/dfs.png}
+    \caption{درخت \lr{DFS} با شروع از راس ۱}
+    \label{fig:my_label}
+\end{figure}
+با توجه به شکل فوق واضح است که از راس ۱ به همه‌ی رئوس مسیر وجود دارد. همچنین
+اگر به درخت شکل فوق، یال‌های
+\lr{(9, 1)}
+و
+\lr{(6, 8)}
+از گراف اصلی را اضافه کنیم، دیده می‌شود که از هر راسی به راس ۱ نیز مسیر وجود دارد. در نتیجه بین هر راس دلخواه
+\lr{u}
+و
+\lr{v}
+نیز مسیر وجود دارد، زیرا می‌توان از
+\lr{u}
+به ۱ و همینطور از ۱ به
+\lr{v}
+رسید و بلعکس.
+
+گراف
+\lr{b}
+قویا همبند نیست.\\
+زیرا از راس ۶ به هیچ راسی مسیر نداریم ولی از بقیه رئوس به ۶ مسیر وجود دارد.
+
+\section*{سوال دوم}
+
+\subsection*{أ. ماتریس مجاورتی }
+
+$\begin{pmatrix}
+    0&1&1&0&0\\
+    0&0&0&1&0\\
+    0&1&0&0&1\\
+    0&0&0&0&0\\
+    0&0&0&1&0\\
+\end{pmatrix}$
+
+\subsection*{ب. درخت کمینه‌ی پوشا}
+با بکارگیری الگوریتم کروسکال، به ترتیب از کم‌ترین یال اضافه می‌کنیم تا شکل زیر بدست آید:
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.8\linewidth]{Photos/HW1/mst.png}
+    \caption{درخت کمینه‌ی پوشا}
+    \label{fig:my_label}
+\end{figure}
+
+\end{multicols}
+\end{document}
