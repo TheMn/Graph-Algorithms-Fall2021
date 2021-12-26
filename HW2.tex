@@ -1,0 +1,332 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2019
+
+% ready for submission
+% \usepackage{neurips_2019}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+    % \usepackage[preprint]{neurips_2019}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+\usepackage[final]{neurips}
+
+% to avoid loading the natbib package, add option nonatbib:
+    % \usepackage[nonatbib]{neurips_2019}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage[center]{caption}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xepersian}
+
+\usepackage{kbordermatrix}
+
+\settextfont{XB Yas.ttf}
+
+\title{تمرین دوم}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+\author{%
+  امیرحسین مهدی‌نژاد\\
+  شماره دانشجویی 810800058\\
+  \texttt{mahdinejad@ut.ac.ir} \\
+  % examples of more authors
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+% create title (includes both anonymized and non-anonymized versions)
+% \providecommand{\@makepertitle}{}
+% \newcommand{\makepertitle}{%
+%   \vbox{%
+%     \hsize\textwidth
+%     \linewidth\hsize
+%     \vskip 0.1in
+%     \toptitlebar
+%     \centering
+%     {\LARGE\bf \@title\par}
+%     \bottomtitlebar
+%       \def\And{%
+%         \end{tabular}\hfil\linebreak[0]\hfil%
+%         \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+%       }
+%       \def\AND{%
+%         \end{tabular}\hfil\linebreak[4]\hfil%
+%         \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+%       }
+%       \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
+%     \vskip 0.3in \@minus 0.1in
+%   }
+% }
+
+\begin{document}
+
+
+\begin{minipage}{0.1\textwidth}% adapt widths of minipages to your needs
+\includegraphics[width=1.1cm]{Photos/UT_logo.png}
+\end{minipage}%
+\hfill%
+\begin{minipage}{0.9\textwidth}\raggedleft
+دانشکده فنی، دانشگاه تهران\\
+الگوریتم‌های گراف و شبکه - 
+دی
+ماه 1400\\
+\end{minipage}
+% \end{}
+
+
+\makepertitle
+
+
+% \begin{abstract}
+%  این بخش از یک پاراگراف تشکیل شده است که توضیحاتی کلی در مورد مساله و راه حل شما ارائه می‌دهد.
+% \end{abstract}
+
+\begin{multicols}{2}
+\section*{سوال اول}
+
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.9\linewidth]{Photos/HW2/1.png}
+    \caption{
+    گراف صورت سوال
+    }
+    \label{fig:my_label}
+\end{figure}
+
+% -----------------------------------------------------------------------
+\subsection*{\lr{1.a}}
+
+\subsubsection*{
+\lr{node-arc incidence matrix}
+}
+
+\renewcommand{\kbldelim}{(}% Left delimiter
+\renewcommand{\kbrdelim}{)}% Right delimiter
+\[
+  \kbordermatrix{
+    & e_{12} & e_{13} & e_{24} & e_{32} & e_{35} & e_{54} \\
+    1 & 1 & 1 & 0 & 0 & 0 & 0 \\
+    2 & -1 & 0 & 1 & -1 & 0 & 0\\
+    3 & 0 & -1 & 0 & 1 & 1 & 0 \\
+    4 & 0 & 0 & -1 & 0 & 0 & -1 \\
+    5 & 0 & 0 & 0 & 0 & -1 & 1
+  }
+\]
+
+\subsubsection*{
+\lr{node-node adjacency matrix}
+}
+
+\renewcommand{\kbldelim}{(}% Left delimiter
+\renewcommand{\kbrdelim}{)}% Right delimiter
+\[
+  \kbordermatrix{
+    & 1 & 2 & 3 & 4 & 5 \\
+    1 & 0 & 1 & 1 & 0 & 0 \\
+    2 & 0 & 0 & 0 & 1 & 0 \\
+    3 & 0 & 1 & 0 & 0 & 1 \\
+    4 & 0 & 0 & 0 & 0 & 0 \\
+    5 & 0 & 0 & 0 & 1 & 0
+  }
+\]
+
+% -----------------------------------------------------------------------
+\subsection*{\lr{1.b}}
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.99\linewidth]{Photos/HW2/arc_reverse.png}
+    \caption{
+    روال معکوس کردن جهت یال، برای از بین بردن
+    \lr{cost}
+    منفی
+    }
+    \label{fig:my_label}
+\end{figure}
+اگر ابتدا طبق روال شکل فوق، این کار را برای یال
+$(3, 2)$
+انجام دهیم، مقادیر به این صورت تغییر خواهند کرد:
+$$b(3) = -15, b(2) = 5$$
+$$c_{23} = 1, u_{23} = 20$$
+سپس همین کار را برای یال
+$(2, 4)$
+نیز انجام می‌دهیم:
+$$b(2) = -5, b(4) = 0$$
+$$c_{42} = 2, u_{42} = 10$$
+
+% -----------------------------------------------------------------------
+\subsection*{\lr{1.c}}
+\begin{figure}[H]
+    \center
+    \includegraphics[width=\linewidth]{Photos/HW2/remove_c.png}
+    \caption{
+    روال از بین بردن ظرفیت یال
+    }
+    \label{fig:my_label}
+\end{figure}
+اگر ابتدا طبق روال شکل فوق، این کار را برای یال
+$(3, 2)$
+انجام دهیم و نود
+$6$
+را بین آن‌ها اضافه کنیم، خواهیم داشت:
+$$b(3) = 5, b(6) = -20, b(2) = 5$$
+$$c_{36} = -1, u_{36} = \infty$$
+$$c_{26} = 0, u_{26} = \infty$$
+سپس همین کار را برای یال
+$(2, 4)$
+تکرار کرده و نود
+$7$
+را بین آن‌ها اضافه می‌کنیم:
+$$b(2) = 5, b(7) = -10, b(4) = 0$$
+$$c_{27} = -2, u_{27} = \infty$$
+$$c_{47} = 0, u_{47} = \infty$$
+
+% -----------------------------------------------------------------------
+\subsection*{\lr{1.d}}
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.9\linewidth]{Photos/HW2/nonzero_lb.png}
+    \caption{
+    روال صفر کردن
+    \lr{lower bound}
+    ها
+    }
+    \label{fig:my_label}
+\end{figure}
+اگر طبق روال شکل فوق، این کار را برای یال
+$(1, 2)$
+انجام دهیم خواهیم داشت:
+$$b(1) = 15, b(2) = -10$$
+$$c_{21} = 5, u_{21} = \infty$$
+همچنین برای یال
+$(3, 5)$
+نیز بدین شکل خواهد شد:
+$$b(3) = 0, b(5) = 5$$
+$$c_{53} = 10, u_{53} = \infty$$
+
+% -----------------------------------------------------------------------
+\subsection*{\lr{1.e}}
+این بند مشابه بند
+\lr{c}
+همین سوال تکرار شده است.\\
+\rule{\linewidth}{1pt}
+% -----------------------------------------------------------------------
+\section*{سوال دوم}
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.9\linewidth]{Photos/HW2/2.png}
+    \caption{
+    گراف صورت سوال
+    }
+    \label{fig:my_label}
+\end{figure}
+
+\subsection*{\lr{2.a}}
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.45\linewidth]{Photos/HW2/bfs2.png}
+    \caption{
+    درخت
+    \lr{BFS}
+    }
+    \label{fig:my_label}
+\end{figure}
+
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.5\linewidth]{Photos/HW2/backedge.png}
+    \caption{
+    درخت
+    \lr{DFS}
+    }
+    \label{fig:my_label}
+\end{figure}
+% -----------------------------------------------------------------------
+\subsection*{\lr{2.b}}
+گراف صورت سوال
+\lr{Acyclic}
+نیست و می‌توان دور جهت‌دار
+$5 \rightarrow 6 \rightarrow 7 \rightarrow 5$
+را برای نقض بدون دور بودن آن مثال زد.\\
+با توجه به درخت
+\lr{DFS}
+بند قبلی می‌توان نتیجه گرفت که یال
+$(5, 6)$
+که در گراف اصلی وجود دارد، به عنوان
+\lr{Back edge}
+دیده می‌شود و با حذف آن، گراف دور جهت‌دار نخواهد داشت.
+
+پس از اینکه دورهای گراف را حذف کردیم می‌توان از روش
+\lr{BFS}
+(الگوریتم کان) به ترتیب
+[1,2,3,4,5,6,9,7,8]
+رسید و همچنین از روش
+\lr{DFS}
+به ترتیب
+[1,3,2,4,5,6,9,7,8]
+می‌رسیم. یعنی ترتیب توپولوژیک آن یکتا نیست.\\
+\rule{\linewidth}{1pt}
+
+% -----------------------------------------------------------------------
+\section*{سوال سوم}
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.75\linewidth]{Photos/HW2/3.png}
+    \caption{
+    گراف صورت سوال
+    }
+    \label{fig:my_label}
+\end{figure}
+در الگوریتم دایجسترا ابتدا
+$\text{dist}(1) = 0$
+و به ازای هر راس دیگر 
+\lr{v}
+مقدار
+$\text{dist}(v) = \infty$
+در نظر گرفته می‌شود.\\
+در هر مرحله نزدیک‌ترین راس
+مثل \lr{x}
+پیدا شده و فاصله‌ی دیگر رئوس با توجه به فاصله‌ی آن آپدیت می‌شود:
+$$\text{dist}(v) = min(\text{dist}(v), \text{dist}(x) + \text{w}(x, v))$$
+به ازای هر راس این پروسه تکرار می‌شود و مجموعه‌ی همسایه‌های آن بررسی می‌شود. در هر دور از این الگوریتم، راسی که کوتاه‌ترین فاصله با
+\lr{s}
+را دارد به مجموعه‌ی نهایی افزوده می‌شود، چرا که کوتاه‌ترین مسیر این راس از یکی از رئوس مجموعه می‌گذرد که در مراحل قبلی فاصله‌ی آن‌ها بدست آمده و توسط رئوس دیگر بروز شده است.
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.9\linewidth]{Photos/HW2/dijk.png}
+    \caption{
+    نتیجه‌ی اجرای الگوریتم دایجسترا با شروع از راس شماره یک
+    }
+    \label{fig:my_label}
+\end{figure}
+
+\end{multicols}
+\end{document}
