@@ -1,41 +1,69 @@
 \documentclass{article}
 
-% if you need to pass options to natbib, use, e.g.:
-%     \PassOptionsToPackage{numbers, compress}{natbib}
-% before loading neurips_2019
+% -----------------------------------------------------------------------------
+% English Comments Added for Clarity
+% This document is a LaTeX file for a homework assignment. The original text is
+% in Persian. The comments below are added to explain the structure and packages
+% used in the document.
+% -----------------------------------------------------------------------------
 
-% ready for submission
-% \usepackage{neurips_2019}
+% --- Package Loading ---
+% The following section loads the necessary LaTeX packages for this document.
 
-% to compile a preprint version, e.g., for submission to arXiv, add add the
-% [preprint] option:
-    % \usepackage[preprint]{neurips_2019}
-
-% to compile a camera-ready version, add the [final] option, e.g.:
+% The 'neurips' style file is used for formatting.
 \usepackage[final]{neurips}
 
-% to avoid loading the natbib package, add option nonatbib:
-    % \usepackage[nonatbib]{neurips_2019}
+% 'multicol' allows for text to be set in multiple columns.
 \usepackage{multicol}
+
+% 'float' provides improved control over floating objects like figures and tables.
 \usepackage{float}
+
+% 'caption' is used for customizing the captions of figures and tables.
 \usepackage[center]{caption}
 
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
+% 'inputenc' with the [utf8] option allows for UTF-8 encoded text to be used directly.
+\usepackage[utf8]{inputenc}
+
+% 'fontenc' with the [T1] option specifies the font encoding.
+\usepackage[T1]{fontenc}
+
+% 'hyperref' creates hyperlinks within the document.
+\usepackage{hyperref}
+
+% 'url' provides a simple way to format URLs.
+\usepackage{url}
+
+% 'booktabs' is used for creating professional-quality tables.
+\usepackage{booktabs}
+
+% 'amsfonts' provides access to blackboard bold math symbols.
+\usepackage{amsfonts}
+
+% 'nicefrac' allows for the typesetting of compact fractions.
+\usepackage{nicefrac}
+
+% 'microtype' improves the typographic quality of the document.
+\usepackage{microtype}
+
+% 'graphicx' is used for including images in the document.
 \usepackage{graphicx}
+
+% 'amsmath' provides a wide range of environments for typesetting mathematical formulas.
 \usepackage{amsmath}
+
+% 'xepersian' is the main package for typesetting Persian text with XeLaTeX.
 \usepackage{xepersian}
 
+% 'kbordermatrix' is used for creating matrices with labels on the borders.
 \usepackage{kbordermatrix}
 
+% --- Font Setup ---
+% Sets the main text font to "XB Yas.ttf", a Persian font included in the repository.
 \settextfont{XB Yas.ttf}
 
+% --- Document Title (in Persian) ---
+% The title of the document is "Second Homework".
 \title{تمرین دوم}
 
 
@@ -111,8 +139,17 @@
 % \end{abstract}
 
 \begin{multicols}{2}
+
+% -----------------------------------------------------------------------------
+% --- Homework Questions Start Here ---
+% The document is organized into sections for each question.
+% -----------------------------------------------------------------------------
+
+% --- Question 1 ---
+% This section addresses the first question of the assignment.
 \section*{سوال اول}
 
+% The graph for Question 1 is shown here.
 \begin{figure}[H]
     \center
     \includegraphics[width=0.9\linewidth]{Photos/HW2/1.png}
@@ -123,8 +160,11 @@
 \end{figure}
 
 % -----------------------------------------------------------------------
+% --- Part 1.a: Matrix Representations ---
 \subsection*{\lr{1.a}}
 
+% --- Node-Arc Incidence Matrix ---
+% This subsection provides the node-arc incidence matrix for the graph.
 \subsubsection*{
 \lr{node-arc incidence matrix}
 }
@@ -142,6 +182,8 @@
   }
 \]
 
+% --- Node-Node Adjacency Matrix ---
+% This subsection provides the node-node adjacency matrix for the graph.
 \subsubsection*{
 \lr{node-node adjacency matrix}
 }
@@ -160,6 +202,9 @@
 \]
 
 % -----------------------------------------------------------------------
+% --- Part 1.b: Handling Negative Costs ---
+% This subsection describes the process of eliminating negative costs in the graph
+% by reversing the direction of arcs.
 \subsection*{\lr{1.b}}
 \begin{figure}[H]
     \center
@@ -183,6 +228,8 @@ $$b(2) = -5, b(4) = 0$$
 $$c_{42} = 2, u_{42} = 10$$
 
 % -----------------------------------------------------------------------
+% --- Part 1.c: Eliminating Arc Capacities ---
+% This subsection explains how to remove arc capacities by introducing new nodes.
 \subsection*{\lr{1.c}}
 \begin{figure}[H]
     \center
@@ -210,6 +257,8 @@ $$c_{27} = -2, u_{27} = \infty$$
 $$c_{47} = 0, u_{47} = \infty$$
 
 % -----------------------------------------------------------------------
+% --- Part 1.d: Handling Non-zero Lower Bounds ---
+% This subsection demonstrates how to make all lower bounds zero.
 \subsection*{\lr{1.d}}
 \begin{figure}[H]
     \center
@@ -233,13 +282,18 @@ $$b(3) = 0, b(5) = 5$$
 $$c_{53} = 10, u_{53} = \infty$$
 
 % -----------------------------------------------------------------------
+% --- Part 1.e ---
+% This part is noted as being a repeat of part 1.c.
 \subsection*{\lr{1.e}}
 این بند مشابه بند
 \lr{c}
 همین سوال تکرار شده است.\\
 \rule{\linewidth}{1pt}
 % -----------------------------------------------------------------------
+% --- Question 2 ---
+% This section addresses the second question of the assignment.
 \section*{سوال دوم}
+% The graph for Question 2 is shown here.
 \begin{figure}[H]
     \center
     \includegraphics[width=0.9\linewidth]{Photos/HW2/2.png}
@@ -249,6 +303,9 @@ $$c_{53} = 10, u_{53} = \infty$$
     \label{fig:my_label}
 \end{figure}
 
+% --- Part 2.a: BFS and DFS Trees ---
+% This subsection shows the Breadth-First Search (BFS) and Depth-First Search (DFS)
+% trees for the given graph.
 \subsection*{\lr{2.a}}
 \begin{figure}[H]
     \center
@@ -270,6 +327,9 @@ $$c_{53} = 10, u_{53} = \infty$$
     \label{fig:my_label}
 \end{figure}
 % -----------------------------------------------------------------------
+% --- Part 2.b: Acyclicity and Topological Sort ---
+% This subsection discusses the acyclicity of the graph and provides a
+% topological sort.
 \subsection*{\lr{2.b}}
 گراف صورت سوال
 \lr{Acyclic}
@@ -296,7 +356,11 @@ $(5, 6)$
 \rule{\linewidth}{1pt}
 
 % -----------------------------------------------------------------------
+% --- Question 3: Dijkstra's Algorithm ---
+% This section explains and demonstrates Dijkstra's algorithm for finding the
+% shortest path in a graph.
 \section*{سوال سوم}
+% The graph for Question 3 is shown here.
 \begin{figure}[H]
     \center
     \includegraphics[width=0.75\linewidth]{Photos/HW2/3.png}
@@ -319,6 +383,7 @@ $$\text{dist}(v) = min(\text{dist}(v), \text{dist}(x) + \text{w}(x, v))$$
 به ازای هر راس این پروسه تکرار می‌شود و مجموعه‌ی همسایه‌های آن بررسی می‌شود. در هر دور از این الگوریتم، راسی که کوتاه‌ترین فاصله با
 \lr{s}
 را دارد به مجموعه‌ی نهایی افزوده می‌شود، چرا که کوتاه‌ترین مسیر این راس از یکی از رئوس مجموعه می‌گذرد که در مراحل قبلی فاصله‌ی آن‌ها بدست آمده و توسط رئوس دیگر بروز شده است.
+% The result of running Dijkstra's algorithm is shown in the figure below.
 \begin{figure}[H]
     \center
     \includegraphics[width=0.9\linewidth]{Photos/HW2/dijk.png}

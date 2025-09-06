@@ -1,39 +1,69 @@
 \documentclass{article}
 
-% if you need to pass options to natbib, use, e.g.:
-%     \PassOptionsToPackage{numbers, compress}{natbib}
-% before loading neurips_2019
+% -----------------------------------------------------------------------------
+% English Comments Added for Clarity
+% This document is a LaTeX file for a homework assignment. The original text is
+% in Persian. The comments below are added to explain the structure and packages
+% used in the document.
+% -----------------------------------------------------------------------------
 
-% ready for submission
-% \usepackage{neurips_2019}
+% --- Package Loading ---
+% The following section loads the necessary LaTeX packages for this document.
 
-% to compile a preprint version, e.g., for submission to arXiv, add add the
-% [preprint] option:
-    % \usepackage[preprint]{neurips_2019}
-
-% to compile a camera-ready version, add the [final] option, e.g.:
+% The 'neurips' style file is used for formatting, likely from a template for the
+% Neural Information Processing Systems (NeurIPS) conference. The [final] option
+% indicates that this is the camera-ready version.
 \usepackage[final]{neurips}
 
-% to avoid loading the natbib package, add option nonatbib:
-    % \usepackage[nonatbib]{neurips_2019}
+% 'multicol' allows for text to be set in multiple columns.
 \usepackage{multicol}
+
+% 'float' provides improved control over floating objects like figures and tables.
 \usepackage{float}
+
+% 'caption' is used for customizing the captions of figures and tables.
 \usepackage[center]{caption}
 
-\usepackage[utf8]{inputenc} % allow utf-8 input
-\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
-\usepackage{hyperref}       % hyperlinks
-\usepackage{url}            % simple URL typesetting
-\usepackage{booktabs}       % professional-quality tables
-\usepackage{amsfonts}       % blackboard math symbols
-\usepackage{nicefrac}       % compact symbols for 1/2, etc.
-\usepackage{microtype}      % microtypography
+% 'inputenc' with the [utf8] option allows for UTF-8 encoded text to be used directly.
+\usepackage[utf8]{inputenc}
+
+% 'fontenc' with the [T1] option specifies the font encoding.
+\usepackage[T1]{fontenc}
+
+% 'hyperref' creates hyperlinks within the document (e.g., for references and URLs).
+\usepackage{hyperref}
+
+% 'url' provides a simple way to format URLs.
+\usepackage{url}
+
+% 'booktabs' is used for creating professional-quality tables.
+\usepackage{booktabs}
+
+% 'amsfonts' provides access to blackboard bold math symbols.
+\usepackage{amsfonts}
+
+% 'nicefrac' allows for the typesetting of compact fractions.
+\usepackage{nicefrac}
+
+% 'microtype' improves the typographic quality of the document.
+\usepackage{microtype}
+
+% 'graphicx' is used for including images in the document.
 \usepackage{graphicx}
+
+% 'amsmath' provides a wide range of environments for typesetting mathematical formulas.
 \usepackage{amsmath}
+
+% 'xepersian' is the main package for typesetting Persian text with XeLaTeX.
 \usepackage{xepersian}
 
+% --- Font Setup ---
+% Sets the main text font to "XB Yas.ttf", which is a Persian font.
+% This font file is included in the repository.
 \settextfont{XB Yas.ttf}
 
+% --- Document Title (in Persian) ---
+% The title of the document is "First Homework".
 \title{تمرین اول}
 
 
@@ -109,8 +139,19 @@
 % \end{abstract}
 
 \begin{multicols}{2}
+
+% -----------------------------------------------------------------------------
+% --- Homework Questions Start Here ---
+% The document is organized into sections for each question.
+% -----------------------------------------------------------------------------
+
+% --- Question 1 ---
+% This section addresses the first question of the assignment.
 \section*{سوال اول}
 
+% --- Part A: In-degree and Out-degree ---
+% This subsection calculates the in-degree and out-degree for each vertex
+% in two different graphs, labeled 'a' and 'b'.
 \subsection*{أ. درجه ورودی/خروجی}
 گراف \lr{a}
 \begin{LTR}
@@ -137,6 +178,8 @@ $$\text{in} \left( 7 \right) = 2, \text{out} \left( 7 \right) = 1$$
 $$\text{in} \left( 8 \right) = 1, \text{out} \left( 8 \right) = 2$$
 \end{LTR}
 
+% --- Part B: Adjacency List ---
+% This subsection provides the adjacency list representation for both graphs.
 \subsection*{ب. لیست مجاورتی}
 گراف \lr{a}
 \begin{align*}
@@ -163,12 +206,17 @@ A( 7 ) &= \{( 7, 6 ) \}\\
 A( 8 ) &= \{( 8, 5 ), ( 8, 7 ) \}
 \end{align*}
 
+% --- Part C: Paths in the Graph ---
+% This subsection provides examples of paths in the graphs.
 \subsection*{ت.}
+
+% --- Path of length 8 in graph 'a' ---
 \subsubsection*{گشت شامل ۸ یال برای \lr{a}}
 \begin{LTR}
 $8 \rightarrow 9 \rightarrow 1 \rightarrow 2 \rightarrow 4 \rightarrow 7 \rightarrow 5 \rightarrow 8 \rightarrow 9$
 \end{LTR}
 
+% --- Path of length 6 in graph 'b' ---
 \subsubsection*{گشت شامل ۶ یال برای \lr{b}}
 \begin{LTR}
 $8 \rightarrow 5 \rightarrow 4 \rightarrow 1 \rightarrow 2 \rightarrow 7 \rightarrow 6$
@@ -176,7 +224,12 @@ $8 \rightarrow 5 \rightarrow 4 \rightarrow 1 \rightarrow 2 \rightarrow 7 \righta
 
 \pagebreak
 
+% --- Part D: Graph Properties Analysis ---
+% This subsection analyzes several properties of the graphs, such as whether
+% they are acyclic, bipartite, or strongly connected.
 \subsection*{ث.}
+
+% --- Checking if the graphs are Acyclic ---
 \subsubsection*{بررسی \lr{Acyclic} بودن}
 گراف
 \lr{a}
@@ -195,6 +248,7 @@ $1 \rightarrow 8 \rightarrow 5 \rightarrow 4 \rightarrow 1$
 \lr{Acyclic}
 نیستند.
 
+% --- Checking if the graphs are Bipartite ---
 \subsubsection*{بررسی \lr{Bipartite} بودن}
 گراف
 \lr{a}
@@ -210,6 +264,7 @@ $$S_1 = \{ 1, 3, 5, 7 \}$$
 $$S_2 = \{ 2, 4, 6, 8 \}$$
 \end{LTR}
 
+% --- Checking if the graphs are Strongly Connected ---
 \subsubsection*{بررسی \lr{Strongly Connected} بودن}
 گراف
 \lr{a}
@@ -240,8 +295,12 @@ $$S_2 = \{ 2, 4, 6, 8 \}$$
 قویا همبند نیست.\\
 زیرا از راس ۶ به هیچ راسی مسیر نداریم ولی از بقیه رئوس به ۶ مسیر وجود دارد.
 
+% --- Question 2 ---
+% This section addresses the second question of the assignment.
 \section*{سوال دوم}
 
+% --- Part A: Adjacency Matrix ---
+% This subsection provides the adjacency matrix for a given graph.
 \subsection*{أ. ماتریس مجاورتی }
 
 $\begin{pmatrix}
@@ -252,6 +311,9 @@ $\begin{pmatrix}
     0&0&0&1&0\\
 \end{pmatrix}$
 
+% --- Part B: Minimum Spanning Tree ---
+% This subsection shows the Minimum Spanning Tree (MST) of a graph,
+% found using Kruskal's algorithm.
 \subsection*{ب. درخت کمینه‌ی پوشا}
 با بکارگیری الگوریتم کروسکال، به ترتیب از کم‌ترین یال اضافه می‌کنیم تا شکل زیر بدست آید:
 \begin{figure}[H]
